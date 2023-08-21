@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GiardDesign</title>
     <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link href="./dist/output.css" rel="stylesheet">
 </head>
 <body>
@@ -13,33 +17,69 @@
             <div class="mb-3 2xl:mb-0">
                 <img src="./assets/logo.svg" width="115" height="20" alt="giarddesign">
             </div>
-            <div class="flex flex-col 2xl:flex-row items-center gap-4 2xl:gap-12 w-full 2xl:w-auto text-sm leading-[150%] tracking-[-0.14px]">
-                <div class="flex justify-center w-full 2xl:w-auto cursor-pointer relative" onclick="showOffer()">
-                    Oferta
-                    <img class="ml-[5px]" src="./assets/icons/arrow-down.svg" alt="offers">
-                    <div id="offers-navi" class="absolute bg-off-white border border-primary p-3 2xl:p-10 z-10 rounded-[28px] top-full inset-x-auto w-auto flex-col 2xl:flex-row gap-6 2xl:gap-12 justify-center hidden">
-                        <div class="flex flex-col justify-between">
-                            <div class="offer-navi flex gap-4"><img src="./assets/icons/projekty.svg" alt="projekty">Projekty</div>
-                            <div class="offer-navi flex gap-4"><img src="./assets/icons/wizualizacje.svg" alt="wizualizacje">Wizualizacje</div>
-                            <div class="offer-navi flex gap-4"><img src="./assets/icons/realizacje.svg" alt="realizacje">Realizacje</div>  
+            <div class="flex flex-col 2xl:flex-row items-center gap-4 2xl:gap-12 w-full 2xl:w-auto text-sm leading-[150%] tracking-[-0.14px] z-20">
+                <div class="flex justify-center w-full 2xl:w-auto cursor-pointer relative">
+                    <div class="flex gap-[5px] hover:underline" onclick="showOffer()">
+                        Oferta
+                        <img id="offers-arrow" src="./assets/icons/arrow-down.svg" alt="offers">
+                    </div>
+                    <div id="offers-navi" class="absolute bg-white border border-primary p-3 2xl:p-5 rounded-xl top-full inset-x-auto w-auto flex flex-col 2xl:flex-row gap-8 justify-center shadow-2xl no-opacity">
+                        <div class="flex flex-col justify-around">
+                            <div class="offer-navi flex gap-4">
+                                <img src="./assets/icons/projekty.svg" width="20" height="20" alt="projekty">
+                                Projekty
+                            </div>
+                            <div class="offer-navi">
+                                <img src="./assets/icons/wizualizacje.svg" width="20" height="20" alt="wizualizacje">
+                                Wizualizacje
+                            </div>
+                            <div class="offer-navi">
+                                <img src="./assets/icons/realizacje.svg" width="20" height="20" alt="realizacje">
+                                Realizacje
+                            </div>
+                            <div class="offer-navi">
+                                <img  src="./assets/icons/wizualizacje.svg" width="20" height="20" alt="ogród zimowy">
+                                Ogród zimowy
+                            </div>
+                            <div class="offer-navi">
+                                <img src="./assets/icons/projekty.svg" width="20" height="20" alt="architektura ogrodowa">
+                                Architektura ogrodowa
+                            </div> 
                         </div>
-                        <div class="flex flex-col justify-between">
-                            <div class="offer-navi flex gap-4"><img src="./assets/icons/projekty.svg" alt="projekty">Lorem ipsum,  </div>
-                            <div class="offer-navi flex gap-4"><img src="./assets/icons/wizualizacje.svg" alt="wizualizacje">dolor sit amet</div>
-                            <div class="offer-navi flex gap-4"><img src="./assets/icons/realizacje.svg" alt="realizacje">consectetur adipisicing elit</div>  
+                        <div class="flex flex-col justify-around">
+                            <div class="offer-navi">
+                                <img src="./assets/icons/wizualizacje.svg" width="20" height="20" alt="cennik">
+                                Cennik
+                            </div>
+                            <div class="offer-navi">
+                                <img src="./assets/icons/projekty.svg" width="20" height="20" alt="katalog roślin">
+                                Katalog&nbsp;roślin
+                            </div>
+                            <div class="offer-navi">
+                                <img src="./assets/icons/realizacje.svg" width="20" height="20" alt="place zabaw">
+                                Place&nbsp;zabaw
+                            </div>
+                            <div class="offer-navi">
+                                <img src="./assets/icons/projekty.svg" width="20" height="20" alt="wyprzedaż">
+                                Wyprzedaż
+                            </div> 
+                            <div class="offer-navi">
+                                <img src="./assets/icons/wizualizacje.svg" width="20" height="20" alt="relaks w ogrodzie">
+                                Relaks w ogrodzie
+                            </div>
                         </div>
-                        <div class="h-full w-60 2xl:w-80">
-                            <img class="object-contain rounded-3xl" src="./assets/img/Photo-4.png" alt="advertising">
+                        <div class="w-48 h-full">
+                            <img class="object-contain rounded-3xl border border-primary" src="./assets/img/Photo-8.png" alt="advertisement">
                         </div>
                     </div>
                 </div>
-                <a href="#o-firmie">
+                <a class="hover:underline" href="#o-firmie">
                     O firmie
                 </a>
-                <a href="#realizacje">
+                <a class="hover:underline" href="#realizacje">
                     Realizacje
                 </a>
-                <a href="#kontakt">
+                <a class="hover:underline" href="#kontakt">
                     Kontakt
                 </a>
                 <div class="flex gap-2">
@@ -53,7 +93,7 @@
                 <ul id="slider" class="max-h-[442] 2xl:max-h-[737px] overflow-hidden">
                     <li class="flex bg-secondary h-full">
                         <div class="flex-col 2xl:w-[599px] p-5 2xl:p-0 mx-auto my-auto">
-                            <h1 class="text-2xl 2xl:text-6xl 2xl:leading-[70px] font-montserrat">
+                            <h1 class="text-2xl 2xl:text-6xl 2xl:leading-[70px] font-montserrat font-medium">
                                 Nowoczesna aranżacja<br>Twojego ogrodu 
                             </h1>
                             <div class="text-sm 2xl:text-base 2xl:w-[489px] mt-5 mb-5 2xl:mt-11 2xl:mb-[72px]">
@@ -65,19 +105,19 @@
                                 </a>
                                 <a href="#realizacje" class="flex items-center gap-2 text-primary border border-primary hover:bg-off-white px-6 pt-3 pb-[14px] rounded-full">
                                     Zobacz nasze realizacje
-                                    <img class="rotate-90" src="./assets/icons/arrow-cta.svg" alt="Dowiedz się więcej">
+                                    <img class="rotate-90" src="./assets/icons/arrow-cta.svg" alt="see more">
                                 </a>
                             </div>
                         </div>
                         <div>
-                            <img class="h-full w-full object-cover" src="./assets/img/img_1.png" alt="">
+                            <img class="h-full w-full object-cover" src="./assets/img/img_1.png" alt="sample project 1">
                         </div>
                     </li>
                     <li class="relative hidden bg-primary text-off-white">
-                        <img class="h-full w-full object-cover" src="./assets/img/img_2.png" alt="">
+                        <img class="h-full w-full object-cover" src="./assets/img/img_2.png" alt="sample project 2">
                     </li>
                     <li class="relative hidden bg-off-black text-secondary">
-                        <img class="h-full w-full object-cover" src="./assets/img/Photo-3.png" alt="">
+                        <img class="h-full w-full object-cover" src="./assets/img/Photo-3.png" alt="sample project 3">
                     </li>
                 </ul>
                 <div class="absolute bottom-0 right-0">
@@ -173,7 +213,7 @@
                 <div class="text-sm 2xl:text-base 2xl:tracking-[-0.16px] mb-6 2xl:mb-[72px]">
                     Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i&nbsp;realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i&nbsp;elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.
                 </div>
-                <button class="flex items-center gap-2 text-sm 2xl:text-base px-6 pt-3 pb-[14px] rounded-full border border-off-white">
+                <button class="flex items-center gap-2 text-sm 2xl:text-base px-6 pt-3 pb-[14px] rounded-full border border-off-white hover:animate-bounce">
                     Poznaj nas bliżej
                     <img src="./assets/icons/arrow-left.svg" alt="Dowiedz się więcej">
                 </button>  
@@ -250,7 +290,7 @@
             <div class="w-full 2xl:w-[1040px] bg-primary text-off-white flex flex-col 2xl:flex-row gap-8 2xl:gap-16 items-center 2xl:items-end justify-end py-5 px-5 2xl:py-[120px] 2xl:px-[110px] mx-auto">
                 <div class="text-2xl 2xl:text-[40px] 2xl:leading-[120%] text-center 2xl:text-left">
                     <span class="font-montserrat 2xl:tracking-[-2px]">Zostańmy w&nbsp;kontakcie!<br>Znajdziesz nas na </span>
-                    <span class="font-bold italic 2xl:tracking-[1px]">Instagramie.</span>
+                    <span class="font-medium italic 2xl:tracking-[1px]">Instagramie.</span>
                 </div>
                 <div class="flex flex-col flex-1 items-center 2xl:items-start gap-6">
                     <div>

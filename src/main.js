@@ -8,10 +8,13 @@ function search() {
     showSearch.classList.toggle("border");
 };
 
+const offersNav = document.getElementById('offers-navi');
+
 function showOffer() {
-    const offersNav = document.getElementById('offers-navi');
-    offersNav.classList.toggle('flex');
-    offersNav.classList.toggle('hidden');
+    offersNav.classList.toggle('nav-opacity');
+    offersNav.classList.toggle('no-opacity');
+    
+    document.getElementById('offers-arrow').classList.toggle('rotate-180');
 };
 
 // Intro
