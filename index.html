@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie rekrutacyjne 2023</title>
+    <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <div class="w-full 2xl:w-[1440px] mx-auto text-off-black font-inter">
+        <section class="max-w-full 2xl:max-w-[1262px] py-3 2xl:py-6 mx-auto flex flex-col 2xl:flex-row justify-between items-center">
+            <div class="mb-3 2xl:mb-0">
+                <img src="./assets/logo.svg" width="115" height="20" alt="giarddesign">
+            </div>
+            <div class="flex flex-col 2xl:flex-row items-center gap-4 2xl:gap-12 w-full 2xl:w-auto text-sm leading-[150%] tracking-[-0.14px]">
+                <div class="flex justify-center w-full 2xl:w-auto cursor-pointer relative" onclick="showOffer()">
+                    Oferta
+                    <img class="ml-[5px]" src="./assets/icons/arrow-down.svg" alt="offers">
+                    <div id="offers-navi" class="absolute bg-off-white border border-primary p-3 2xl:p-10 z-10 rounded-[28px] top-full inset-x-auto w-auto flex-col 2xl:flex-row gap-6 2xl:gap-12 justify-center hidden">
+                        <div class="flex flex-col justify-between">
+                            <div class="offer-navi flex gap-4"><img src="./assets/icons/projekty.svg" alt="projekty">Projekty</div>
+                            <div class="offer-navi flex gap-4"><img src="./assets/icons/wizualizacje.svg" alt="wizualizacje">Wizualizacje</div>
+                            <div class="offer-navi flex gap-4"><img src="./assets/icons/realizacje.svg" alt="realizacje">Realizacje</div>  
+                        </div>
+                        <div class="flex flex-col justify-between">
+                            <div class="offer-navi flex gap-4"><img src="./assets/icons/projekty.svg" alt="projekty">Lorem ipsum,  </div>
+                            <div class="offer-navi flex gap-4"><img src="./assets/icons/wizualizacje.svg" alt="wizualizacje">dolor sit amet</div>
+                            <div class="offer-navi flex gap-4"><img src="./assets/icons/realizacje.svg" alt="realizacje">consectetur adipisicing elit</div>  
+                        </div>
+                        <div class="h-full w-60 2xl:w-80">
+                            <img class="object-contain rounded-3xl" src="./assets/img/Photo-4.png" alt="advertising">
+                        </div>
+                    </div>
+                </div>
+                <a href="#o-firmie">
+                    O firmie
+                </a>
+                <a href="#realizacje">
+                    Realizacje
+                </a>
+                <a href="#kontakt">
+                    Kontakt
+                </a>
+                <div class="flex gap-2">
+                    <input class="rounded-full border-primary w-0 transition-width ease-linear" type="text">
+                    <img class="cursor-pointer" onclick="search()" src="./assets/icons/search.svg" width="24" height="24" alt="search">
+                </div>
+            </div>
+        </section>
+        <section class="shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+            <div class="relative">
+                <ul id="slider" class="max-h-[442] 2xl:max-h-[737px] overflow-hidden">
+                    <li class="flex bg-secondary h-full">
+                        <div class="flex-col 2xl:w-[599px] p-5 2xl:p-0 mx-auto my-auto">
+                            <h1 class="text-2xl 2xl:text-6xl 2xl:leading-[70px] font-montserrat">
+                                Nowoczesna aranżacja<br>Twojego ogrodu 
+                            </h1>
+                            <div class="text-sm 2xl:text-base 2xl:w-[489px] mt-5 mb-5 2xl:mt-11 2xl:mb-[72px]">
+                                Marka GiardDesign to wieloletnie doświadczenie i&nbsp;wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z&nbsp;indywidualnym podejściem do każdego projektu.
+                            </div>
+                            <div class="flex flex-col 2xl:flex-row items-start gap-3 2xl:gap-9 text-sm 2xl:text-base">
+                                <a href="#kontakt" class="text-off-white bg-primary px-6 pt-3 pb-[14px] rounded-full">
+                                    Skontaktuj się z&nbsp;nami
+                                </a>
+                                <a href="#realizacje" class="flex items-center gap-2 text-primary px-6 pt-3 pb-[14px] rounded-full border border-primary">
+                                    Zobacz nasze realizacje
+                                    <img class="rotate-90" src="./assets/icons/arrow-cta.svg" alt="Dowiedz się więcej">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="h-full w-full object-cover" src="./assets/img/img_1.png" alt="">
+                        </div>
+                    </li>
+                    <li class="relative hidden bg-primary text-off-white">
+                        <img class="h-full w-full object-cover" src="./assets/img/img_2.png" alt="">
+                    </li>
+                    <li class="relative hidden bg-off-black text-secondary">
+                        <img class="h-full w-full object-cover" src="./assets/img/Photo-3.png" alt="">
+                    </li>
+                </ul>
+                <div class="absolute bottom-0 right-0">
+                    <div class="flex gap-3 2xl:gap-6 py-3 px-3 2xl:py-6 2xl:px-8 bg-off-white">
+                        <button onclick="prev()" class="w-6 h-6 2xl:w-12 2xl:h-12 flex justify-center items-center">
+                            <img src="./assets/icons/arrow.svg" alt="previous slide">
+                        </button>
+                        <button onclick="next()" class="w-6 h-6 2xl:w-12 2xl:h-12 flex justify-center items-center">
+                            <img class="rotate-180" src="./assets/icons/arrow.svg" alt="next slide">
+                        </button>  
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="flex flex-col gap-6 2xl:gap-24 justify-center items-center pt-10 pb-10 px-5 2xl:px-0 2xl:pt-[120px] 2xl:pb-40 bg-off-white">
+            <div class="w-full 2xl:w-[1040px] flex justify-start">
+                <div class="2xl:w-[709px]">
+                    <div class="text-primary text-xs leading-[18px] tracking-[-0.12px]">
+                        Oferta
+                    </div>
+                    <h2 class="text-2xl 2xl:text-5xl 2xl:leading-[115%] font-medium mt-4 mb-8">
+                        <span class="font-montserrat 2xl:tracking-[-1.44px]">Działamy </span>
+                        <span class="font-inter italic">kompleksowo</span>
+                    </h2>
+                    <div class="text-sm 2xl:text-base 2xl:tracking-[-0.16px]">
+                        Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i&nbsp;wcielimy w&nbsp;życie, a&nbsp;na&nbsp;każdym etapie posłużymy radą i&nbsp;wieloletnim doświadczeniem. 
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col 2xl:flex-row gap-7 2xl:gap-16">
+                <div class="card">
+                    <div class="card-front">
+                        <div>
+                            <img class="w-7 h-7 2xl:w-10 2xl:h-10" src="./assets/icons/projekty.svg" alt="projekty">
+                            <h3 class="text-xl 2xl:text-[28px] 2xl:leading-[115%] 2xl:tracking-[-1.4px] font-montserrat font-medium mt-3 2xl:mt-8 mb-3">Projekty</h3>
+                            <div class="text-sm leading-[150%] tracking-[-0.14px]">Zaprojektujemy Twój ogród w nowoczesnym stylu i&nbsp;z&nbsp;najlepszym wykorzystaniem istniejącej przestrzeni.</div>
+                        </div>
+                        <div class="cta text-sm 2xl:text-base">
+                            <span>Dowiedz się więcej</span>
+                            <img src="./assets/icons/arrow-cta.svg" alt="Dowiedz się więcej">
+                        </div>    
+                    </div>
+                    <div class="card-back">
+                        <img class="w-full h-full object-cover rounded-3xl" src="./assets/img/Photo-1.png" alt="">
+                    </div>  
+                </div>
+                <div class="card">
+                    <div class="card-front">
+                        <div>
+                            <img class="w-7 h-7 2xl:w-10 2xl:h-10" src="./assets/icons/wizualizacje.svg" alt="wizualizacje">
+                            <h3 class="text-xl 2xl:text-[28px] 2xl:leading-[115%] 2xl:tracking-[-1.4px] font-montserrat font-medium mt-3 2xl:mt-8 mb-3">Wizualizacje</h3>
+                            <div class="text-sm leading-[150%] tracking-[-0.14px]">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w&nbsp;technologii 3D.</div>
+                        </div>
+                        <div class="cta text-sm 2xl:text-base">
+                            <span>Dowiedz się więcej</span>
+                            <img src="./assets/icons/arrow-cta.svg" alt="Dowiedz się więcej">
+                        </div>    
+                    </div>
+                    <div class="card-back">
+                        <img class="w-full h-full object-cover rounded-3xl" src="./assets/img/Photo-8.png" alt="">
+                    </div> 
+                </div>
+                <div class="card">
+                    <div class="card-front">
+                        <div>
+                            <img class="w-7 h-7 2xl:w-10 2xl:h-10" src="./assets/icons/realizacje.svg" alt="realizacje">
+                            <h3 class="text-xl 2xl:text-[28px] 2xl:leading-[115%] 2xl:tracking-[-1.4px] font-montserrat font-medium mt-3 2xl:mt-8 mb-3">Realizacje</h3>
+                            <div class="text-sm leading-[150%] tracking-[-0.14px]">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i&nbsp;zaawansowanych technologii.</div>
+                        </div>
+                        <div class="cta text-sm 2xl:text-base">
+                            <span>Zobacz nasze realizacje</span>
+                            <img src="./assets/icons/arrow-cta.svg" alt="Zobacz nasze realizacje">
+                        </div>    
+                    </div>
+                    <div class="card-back">
+                        <img class="w-full h-full object-cover rounded-3xl" src="./assets/img/Photo-7.png" alt="">
+                    </div> 
+                </div>
+            </div>
+        </section>
+        <section id="o-firmie" class="bg-primary text-off-white flex flex-col 2xl:flex-row">
+            <div>
+                <img class="h-full w-full object-cover" src="./assets/img/img_2.png" alt=""/>
+            </div>
+            <div class="flex-col 2xl:w-[596px] mx-auto my-auto py-5 2xl:py-0 pl-5 2xl:pl-24 pr-5 2xl:pr-0">
+                <div class="text-xs leading-[18px] tracking-[-0.12px]">
+                    O firmie
+                </div>
+                <h2 class="text-2xl 2xl:text-5xl 2xl:leading-[115%] font-medium mt-4 mb-8 2xl:mb-10">
+                    <span class="font-montserrat 2xl:tracking-[-1.44px]">Tworzymy</span><br>
+                    <span class="font-inter italic">z pasją</span>
+                </h2>
+                <div class="text-sm 2xl:text-base 2xl:tracking-[-0.16px] mb-6 2xl:mb-[72px]">
+                    Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i&nbsp;realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i&nbsp;elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.
+                </div>
+                <button class="flex items-center gap-2 text-sm 2xl:text-base px-6 pt-3 pb-[14px] rounded-full border border-off-white">
+                    Poznaj nas bliżej
+                    <img src="./assets/icons/arrow-left.svg" alt="Dowiedz się więcej">
+                </button>  
+            </div>
+        </section>
+        <section id="realizacje" class="bg-secondary pt-5 pb-5 2xl:pt-[120px] 2xl:pb-11">
+            <div class="2xl:ml-40 pb-8 2xl:pb-24 px-5 2xl:px-0">
+                <div class="text-primary text-xs leading-[18px] tracking-[-0.12px]">
+                    Realizacje
+                </div>
+                <h2 class="text-2xl 2xl:text-5xl leading-[115%] font-medium mt-4">
+                    <span class="font-montserrat tracking-[-1.44px]">Nasze</span>
+                    <span class="font-inter italic">projekty</span>
+                </h2>
+            </div>
+            <div id="gallery-box" class="relative h-[1475px] overflow-hidden">
+                <div class="gallery">
+                    <div class="image"><img src="./assets/img/Photo-1.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-2.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-3.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-4.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-5.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-6.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-7.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-8.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-9.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/img_1.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/img_2.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-1.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-2.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-3.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-4.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-5.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-6.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-7.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-8.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/Photo-9.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/img_1.png" alt=""></div>
+                    <div class="image"><img src="./assets/img/img_2.png" alt=""></div>
+                </div>
+                <div id="gradient" class="gradient"></div>
+                <div class="absolute bottom-[45px] inset-x-0 flex justify-center">
+                  <button id="show" onclick="showMore()" class="flex items-center justify-center gap-2 text-black text-sm 2xl:text-base px-[22px] pt-3 pb-[14px] rounded-full border border-black">
+                    <span>Rozwiń</span>
+                    <img class="rotate-[-90deg] w-4 h-4" src="./assets/icons/arrow.svg" alt="show">                    
+                </button>
+                <button id="hide" onclick="showLess()" class="items-center gap-2 text-black text-sm 2xl:text-base px-[22px] pt-3 pb-[14px] rounded-full border border-black hidden">
+                    <span>Zwiń</span>
+                    <img class="rotate-90 w-4 h-4" src="./assets/icons/arrow.svg" alt="show">                    
+                </button>  
+                </div>
+            </div>
+            <div class="preview-box rounded-xl bg-off-white">
+                <div class="image-box">
+                    <img class="rounded-xl" src="" alt="current image">
+                    <button class="slide prev">
+                        <img src="./assets/icons/arrow.svg" alt="previous image">
+                    </button>
+                    <button  class="slide next">
+                        <img class="rotate-180" src="./assets/icons/arrow.svg" alt="next image">
+                    </button>
+                    <div class="details text-off-black font-montserrat text-sm 2xl:text-lg font-semibold">
+                        <span class="flex">
+                            Projekt<p class="current-img px-1"></p>
+                            z<p class="total-img px-1"></p>
+                        </span>
+                        <span class="close-icon cursor-pointer">x</span>
+                    </div>
+                </div>
+            </div>
+            <div class="shadow"></div>
+        </section>
+        <section id="kontakt" class="bg-off-white py-8 2xl:py-[60px]">
+            <div class="w-full 2xl:w-[1040px] bg-primary text-off-white flex flex-col 2xl:flex-row gap-8 2xl:gap-16 items-center 2xl:items-end justify-end py-5 px-5 2xl:py-[120px] 2xl:px-[110px] mx-auto">
+                <div class="text-2xl 2xl:text-[40px] 2xl:leading-[120%] text-center 2xl:text-left">
+                    <span class="font-montserrat 2xl:tracking-[-2px]">Zostańmy w&nbsp;kontakcie!<br>Znajdziesz nas na </span>
+                    <span class="font-bold italic 2xl:tracking-[1px]">Instagramie.</span>
+                </div>
+                <div class="flex flex-col flex-1 items-center 2xl:items-start gap-6">
+                    <div>
+                        Śledź nasze najnowsze realizacje!
+                    </div>
+                    <a href="https://www.instagram.com/adrespect/" class="text-primary text-sm 2xl:text-base bg-off-white rounded-full pt-[10px] pb-3 px-6">
+                        Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+        <footer class="bg-off-black text-off-white py-10 px-5 2xl:py-20 2xl:px-0">
+            <div class="flex flex-col w-full 2xl:w-[1040px] mx-auto">
+                <div class="flex flex-col 2xl:flex-row items-center gap-5 2xl:gap-0 2xl:justify-between">
+                    <img width="115" height="19" src="./assets/logo-white.svg" alt="giarddesign">
+                    <div class="flex flex-col 2xl:flex-row items-center gap-6">
+                        Daj znać, co możemy dla Ciebie zrobić!
+                        <button class="text-off-white text-sm 2xl:text-base bg-primary px-6 pt-3 pb-[14px] rounded-full">
+                            Skontaktuj się z nami
+                        </button>
+                    </div>
+                </div>
+                <div class="h-px w-full bg-off-white my-10 2xl:my-[62px]"></div>
+                <div class="flex flex-col 2xl:flex-row items-center justify-between gap-10 2xl:gap-0 text-sm leading-[150%] tracking-[-0.14px]">
+                    <div class="flex flex-col 2xl:flex-row gap-8 2xl:gap-12">
+                        <a href="https://adrespect.pl/kontakt/#dzial">Kontakt</a>
+                        <a href="https://www.instagram.com/adrespect/">Instagram</a>
+                        <a href="https://www.facebook.com/adrespectagency">Facebook</a>
+                        <a href="https://www.linkedin.com/company/adrespect/">LinkedIn</a>
+                    </div>
+                    <div class="flex gap-6 2xl:gap-12">
+                        <div>000-000-000</div>
+                        <div>giarddesign@kontakt.pl</div>
+                    </div>
+                </div>
+                <div class="flex flex-col 2xl:flex-row justify-between items-center gap-3 2xl:gap-0 tracking-[-0.16px] mt-16 2xl:mt-[120px]">
+                    <div>
+                        Prawa zastrzeżone © 2022
+                    </div>
+                    <div class="flex gap-2 2xl:gap-4">
+                        made by
+                        <img src="./assets/logo-full-light.svg" alt="adRespect">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+    <script src="./src/main.js"></script>
+</body>
+</html>
