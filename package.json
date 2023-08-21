@@ -1,7 +1,7 @@
 {
   "name": "zadanie-rekrutacyjne-2023",
   "version": "1.0.0",
-  "description": "",
+  "description": "Zadanie rekrutacyjne 2023 dla agencji adRespect.pl",
   "main": "index.html",
   "scripts": {
     "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
