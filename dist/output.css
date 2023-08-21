@@ -2225,6 +2225,10 @@ video {
   background-origin: content-box;
 }
 
+.fill-black {
+  fill: #000;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -2906,8 +2910,37 @@ video {
   content: var(--tw-content);
 }
 
+.hover\:bg-transparent:hover {
+  background-color: transparent;
+}
+
+.hover\:bg-primary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(27 91 49 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-off-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 240 236 / var(--tw-bg-opacity));
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
+}
+
+.hover\:text-primary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(27 91 49 / var(--tw-text-opacity));
+}
+
+.hover\:text-secondary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(220 193 171 / var(--tw-text-opacity));
+}
+
+.hover\:text-off-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(245 240 236 / var(--tw-text-opacity));
 }
 
 .before\:hover\:text-center:hover::before {
