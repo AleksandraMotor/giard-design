@@ -1,6 +1,6 @@
-# Zadanie rekrutacyjne 2023
+# giard design
 
-Zadanie powstało w procesie rekrutacyjnym dla agencji adRespect.pl
+Strona wg projektu agencji adRespect.pl
 
 - galeria w stylu masonry została stworzona za pomocą biblioteki macy.js
 - do stylizacji elementów użyto TailwindCSS
